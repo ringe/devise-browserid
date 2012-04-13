@@ -5,7 +5,6 @@ module BrowserId
     end
 
     def browserid_login_tag
-#      raw %{<img src="https://#{ request.env['warden'].config.browserid_url }/i/sign_in_blue.png" onclick="browserIdLogin();">}
       image_tag("sign_in_blue.png", :onclick => "browserIdLogin();")
     end
   end
