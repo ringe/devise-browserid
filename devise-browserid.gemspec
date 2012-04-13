@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.version     = Devise::Browserid::VERSION
   s.authors     = ["ringe"]
   s.email       = ["runar@rin.no"]
-  s.homepage    = ""
-  s.description   = %q{Rails BrowserID helpers}
+  s.homepage    = "http://rin.no"
+  s.description   = %q{BrowserID helpers for Devise}
   s.summary       = %q{Authenticate your Devise/Warden-enabled Rails app using BrowserID from Mozilla}
 
   s.rubyforge_project = "devise-browserid"
