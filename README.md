@@ -21,15 +21,13 @@ Or install it yourself as:
 devise-browserid depends on warden-browserid and is enabled in the Rails
 asset pipeline.
 
-I use the devise-browserid strategy with warden, configured like this in
-config/initializers/devise.rb in Rails:
+I use the devise-browserid strategy with warden. [Mozilla] [1] says to use
+BrowserID as shown. In your Rails config/initializers/devise.rb:
 
 ```ruby
   config.warden do |manager|
     manager.default_strategies(:scope => :user).unshift :browserid
-    # [Mozilla] [1] says to use BrowserID as follows:
-    # manager.browserid_url = "dev.diresworb.org"  # Development
-(default)
+    # manager.browserid_url = "dev.diresworb.org"  # Development (default)
     # manager.browserid_url = "diresworb.org"      # Beta
     # manager.browserid_url = "browserid.org"      # Production
   end
