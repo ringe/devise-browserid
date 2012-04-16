@@ -18,6 +18,6 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency "warden-browserid"
+  s.add_dependency "warden-browserid", ">= 0.8.0"
   s.add_dependency "devise"
 end

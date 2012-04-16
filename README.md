@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-devise-browserid depends on warden-browserid and lives in the Rails
+devise-browserid depends on warden-browserid and is enabled in the Rails
 asset pipeline.
 
 I use the devise-browserid strategy with warden, configured like this in
@@ -27,7 +27,11 @@ config/initializers/devise.rb in Rails:
 ```ruby
   config.warden do |manager|
     manager.default_strategies(:scope => :user).unshift :browserid
-    manager.browserid_url = "dev.diresworb.org"
+    # [Mozilla] [1] says to use BrowserID as follows:
+    # manager.browserid_url = "dev.diresworb.org"  # Development
+(default)
+    # manager.browserid_url = "diresworb.org"      # Beta
+    # manager.browserid_url = "browserid.org"      # Production
   end
 ```
 
@@ -40,6 +44,9 @@ And the login button wherever you want to:
 ```erb
 <%= browserid_login_tag %>
 ```
+
+[1]: https://developer.mozilla.org/en/BrowserID/Primary/Developer_tips
+"Mozilla BrowserID Developer Tips"
 
 ## Contributing
 
