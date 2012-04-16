@@ -5,7 +5,6 @@ module BrowserId
     # - The official BrowserID include.js
     # - The Devise enabled login and assertion reponse
     def browserid_include_tag
-      debugger
       javascript_include_tag(browserid_include_js_url, "browserid")
     end
 
@@ -16,7 +15,7 @@ module BrowserId
 
     # The URL to the BrowserID official JavaScript
     def browserid_include_js_url
-      "https://#{ Warden::BrowserId::Strategy.browserid_url }/include." + (Rails.env == "development" ? "orig.js" : ".js")
+      "https://#{ Warden::BrowserId::Strategy.browserid_url }/include." + (::Rails.env == "development" ? "orig.js" : ".js")
     end
 
   end
