@@ -11,8 +11,6 @@ Gem::Specification.new do |s|
   s.description   = %q{BrowserID helpers for Devise}
   s.summary       = %q{Authenticate your Devise/Warden-enabled Rails app using BrowserID from Mozilla}
 
-  s.rubyforge_project = "devise-browserid"
-
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
@@ -20,4 +18,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency "warden-browserid", ">= 0.8.0"
   s.add_dependency "devise"
+  s.add_dependency "rake"
 end
