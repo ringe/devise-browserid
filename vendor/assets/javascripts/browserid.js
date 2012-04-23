@@ -36,7 +36,9 @@ function browserIdLogin() {
         data: {"assertion": assertion},
         cache:false,
         success:function(data,status){
-          window.location.href = '/';
+          console.log(data);
+//        setTimeout(function(){}, 4000);
+//          window.location.href = '/';
         },
         error:function(data,status){
           alert(data.statusText + ": " + data.responseText);
