@@ -9,8 +9,8 @@ module BrowserId
     end
 
     # The BrowserID login button
-    def browserid_login_tag
-      image_tag("sign_in_blue.png", :onclick => "browserIdLogin();")
+    def browserid_login_tag(path)
+      image_tag("sign_in_blue.png", :onclick => "browserIdLogin('#{path}');")
     end
 
     # The URL to the BrowserID official JavaScript

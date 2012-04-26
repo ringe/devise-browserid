@@ -40,7 +40,8 @@ Then you add the javascripts at the bottom of your application layout:
 
 And the login button wherever you want to:
 ```erb
-<%= browserid_login_tag %>
+<% sign_in_path = "/sign_in" %>
+<%= browserid_login_tag(sign_in_path) %>
 ```
 
 [1]: https://developer.mozilla.org/en/BrowserID/Primary/Developer_tips
