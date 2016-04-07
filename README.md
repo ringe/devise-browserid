@@ -1,3 +1,7 @@
+# Persona is Shutting Down
+
+Mozilla has announced that Persona will be [shutting down](https://wiki.mozilla.org/Identity/Persona_Shutdown_Guidelines_for_Reliers) November 2016. warden-browserid relies on the Persona service and will stop functioning properly once Persona is shut down. While it is possible to self-host Persona and configure warden-browserid to rely on your own instance, this is difficult and not recommended. See the wiki page linked above for recommended alternatives to Persona for authentication.
+
 # Devise::BrowserId
 
 Authenticate your Warden/Devise-enabled Rails app using BrowserID from Mozilla
